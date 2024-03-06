@@ -6,7 +6,5 @@ vars:
 tasks:
   bench:
     cmds:
-      - go test -bench=. -count=6 -benchtime=15s -benchmem \
-        -cpuprofile={{ .OUT_DIR }}/cpu.prof \
-        -memprofile={{ .OUT_DIR }}/mem.prof \
-        -trace={{ .OUT_DIR }}/trace.out
+      - rm -rf out && mkdir out
+      - go test -bench=. -count=6 -benchtime=5s -benchmem -cpuprofile={{ .OUT_DIR }}/cpu.prof -memprofile={{ .OUT_DIR }}/mem.prof
