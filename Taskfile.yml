@@ -1,0 +1,12 @@
+version: '3'
+
+vars:
+  OUT_DIR: out
+
+tasks:
+  bench:
+    cmds:
+      - go test -bench=. -count=6 -benchtime=15s -benchmem \
+        -cpuprofile={{ .OUT_DIR }}/cpu.prof \
+        -memprofile={{ .OUT_DIR }}/mem.prof \
+        -trace={{ .OUT_DIR }}/trace.out
