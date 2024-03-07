@@ -1,6 +1,7 @@
 syntax = "proto3";
+package pv.V2vtproto;
 
-option go_package = "pb/simple";
+option go_package = "pb/V2vtproto";
 
 message SimpleMessage {
     int32 id = 1;
