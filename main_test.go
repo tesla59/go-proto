@@ -20,3 +20,12 @@ func BenchmarkSerialize(b *testing.B) {
 		}
 	}
 }
+
+func BenchmarkSerializeVT(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		_, err := SimpleMessage.MarshalVT()
+		if err != nil {
+			b.Error("Error while marshalling", err)
+		}
+	}
+}
