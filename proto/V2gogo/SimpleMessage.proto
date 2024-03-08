@@ -1,0 +1,9 @@
+syntax = "proto3";
+package pb.V2gogo;
+
+option go_package = "pb/V2gogo";
+
+message SimpleMessage {
+    int32 id = 1;
+    string message = 2;
+}

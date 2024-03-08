@@ -9,6 +9,12 @@ tasks:
       - rm -rf out && mkdir out
       - go test -bench=. -count=3 -benchtime=5s -benchmem -cpuprofile={{ .OUT_DIR }}/cpu.prof -memprofile={{ .OUT_DIR }}/mem.prof
 
+  proto:
+    cmds:
+      - task: proto-v2
+      - task: proto-v2vtproto
+      - task: proto-v2gogo
+
   proto-v2:
     cmds:
       - protoc -I=. --go_out=. proto/V2/*.proto
@@ -16,3 +22,7 @@ tasks:
   proto-v2vtproto:
     cmds:
       - protoc -I=. --go_out=. --go-vtproto_out=. proto/V2vtproto/*.proto
+
+  proto-v2gogo:
+    cmds:
+      - protoc -I=. --gofast_out=. proto/V2gogo/*.proto
