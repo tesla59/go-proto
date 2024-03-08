@@ -1,0 +1,23 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/tesla59/go-proto
+BenchmarkSerialize-8         	108701587	        54.70 ns/op	      96 B/op	       1 allocs/op
+BenchmarkSerialize-8         	100000000	        54.17 ns/op	      96 B/op	       1 allocs/op
+BenchmarkSerialize-8         	100000000	        60.55 ns/op	      96 B/op	       1 allocs/op
+BenchmarkSerializeVT-8       	952560942	         6.272 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSerializeVT-8       	967103568	         6.253 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSerializeVT-8       	964449454	         6.219 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSerializeGogo-8     	916030592	         6.530 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSerializeGogo-8     	922224454	         6.551 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSerializeGogo-8     	923066684	         6.518 ns/op	       0 B/op	       0 allocs/op
+BenchmarkDeserialize-8       	100000000	        57.54 ns/op	      96 B/op	       1 allocs/op
+BenchmarkDeserialize-8       	100000000	        58.12 ns/op	      96 B/op	       1 allocs/op
+BenchmarkDeserialize-8       	100000000	        57.36 ns/op	      96 B/op	       1 allocs/op
+BenchmarkDeserializeVT-8     	1000000000	         2.814 ns/op	       0 B/op	       0 allocs/op
+BenchmarkDeserializeVT-8     	1000000000	         2.860 ns/op	       0 B/op	       0 allocs/op
+BenchmarkDeserializeVT-8     	1000000000	         2.796 ns/op	       0 B/op	       0 allocs/op
+BenchmarkDeserializeGogo-8   	1000000000	         2.709 ns/op	       0 B/op	       0 allocs/op
+BenchmarkDeserializeGogo-8   	1000000000	         2.800 ns/op	       0 B/op	       0 allocs/op
+BenchmarkDeserializeGogo-8   	1000000000	         2.692 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	github.com/tesla59/go-proto	98.426s
