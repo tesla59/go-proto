@@ -7,7 +7,7 @@ tasks:
   bench:
     cmds:
       - rm -rf out && mkdir out
-      - go test -bench=. -count=3 -benchtime=5s -benchmem -cpuprofile={{ .OUT_DIR }}/cpu.prof -memprofile={{ .OUT_DIR }}/mem.prof
+      - go test -bench=. -count=3 -benchtime=5s -benchmem -cpuprofile={{ .OUT_DIR }}/cpu.prof -memprofile={{ .OUT_DIR }}/mem.prof | tee out/result.txt
 
   proto:
     cmds:
